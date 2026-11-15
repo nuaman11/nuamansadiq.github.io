@@ -235,13 +235,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.15fr .85fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
   grid-template-areas: "text visual" "stats stats";
   align-items: center;
   gap: 40px 60px;
   padding: 140px 0 40px;
 }
-.hero-text { grid-area: text; }
+.hero-text { grid-area: text; min-width: 0; }
 .hero-visual { grid-area: visual; }
 .stats { grid-area: stats; }
 
@@ -262,6 +262,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   animation: shine 6s linear infinite;
   transition: opacity .35s var(--ease), transform .35s var(--ease), filter .35s;
   padding-bottom: .08em;
+  white-space: nowrap;
 }
 .rotator.out { opacity: 0; transform: translateY(14px); filter: blur(6px); }
 .h1-soft { color: var(--ink-2); font-weight: 600; }
@@ -486,7 +487,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 880px) {
-  .hero { grid-template-columns: 1fr; grid-template-areas: "text" "visual" "stats"; padding-top: 120px; min-height: auto; text-align: left; gap: 30px; }
+  .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "visual" "stats"; padding-top: 120px; min-height: auto; text-align: left; gap: 30px; }
   .photo-glass { width: min(260px, 72%); }
   .chip-1 { left: 0; } .chip-2 { right: 0; } .chip-3 { left: 4%; }
   .about-grid { grid-template-columns: 1fr; }

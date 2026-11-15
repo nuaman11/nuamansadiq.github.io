@@ -21,7 +21,23 @@
 
   // ── Rotating headline word
   const rotator = document.getElementById('rotator');
-  const words = ['AI agents', 'automations', 'voice bots', 'iOS apps', 'LLM features'];
+  const words = ['Mobile applications', 'Web applications', 'Websites', 'AI automations', 'AI agents'];
+  // Shrink the rotating line just enough that the longest phrase fits on one line,
+  // so the headline never changes height while words swap.
+  const fitRotator = () => {
+    if (!rotator) return;
+    const current = rotator.textContent;
+    rotator.style.fontSize = '1em';
+    const avail = rotator.parentElement.clientWidth;
+    let widest = 0;
+    words.forEach(w => { rotator.textContent = w; widest = Math.max(widest, rotator.scrollWidth); });
+    rotator.textContent = current;
+    rotator.style.fontSize = Math.min(1, (avail - 4) / widest).toFixed(3) + 'em';
+  };
+  fitRotator();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitRotator);
+  window.addEventListener('resize', fitRotator);
+
   if (rotator && !reduceMotion) {
     let i = 0;
     setInterval(() => {
