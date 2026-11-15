@@ -1,11 +1,15 @@
 (function () {
   'use strict';
+  document.documentElement.classList.add('js');
 
   // Mobile menu toggle
   const toggle = document.getElementById('navToggle');
   const menu = document.getElementById('mobileMenu');
   if (toggle && menu) {
-    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
     menu.querySelectorAll('a').forEach(a =>
       a.addEventListener('click', () => menu.classList.remove('open'))
     );
@@ -31,5 +35,17 @@
       { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
     );
     sections.forEach(sec => observer.observe(sec));
+  }
+
+  // Fade sections and cards in as they scroll into view
+  const revealEls = document.querySelectorAll('.block, .ai-card, .project, .entry');
+  if ('IntersectionObserver' in window) {
+    revealEls.forEach(el => el.classList.add('reveal'));
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(el => ro.observe(el));
   }
 })();
