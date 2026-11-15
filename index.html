@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07080f" />
   <meta name="description" content="Muhammed Nuaman Sadiq: AI automation and mobile developer in Dubai. WhatsApp AI agents, voice booking agents, n8n workflows, LLM features and native iOS apps shipped to real users." />
   <meta property="og:title" content="Nuaman Sadiq · AI Automation & Mobile Developer" />
   <meta property="og:description" content="WhatsApp AI agents, voice booking agents, n8n workflows, LLM features and native iOS apps, shipped to real users." />
@@ -12,187 +13,228 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Animated liquid background -->
+  <div class="liquid" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
   <!-- NAV -->
-  <header class="nav">
-    <a href="#top" class="nav-logo">NS<span>.</span></a>
-    <nav class="nav-links">
+  <header class="nav-wrap">
+    <nav class="nav glass">
+      <a href="#top" class="nav-logo">NS<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#ai">AI work</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Apps</a>
+        <a href="#skills">Skills</a>
+      </div>
+      <a href="#contact" class="nav-cta">Hire me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu glass" id="mobileMenu">
       <a href="#about">About</a>
       <a href="#ai">AI work</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Apps</a>
       <a href="#skills">Skills</a>
-    </nav>
-    <a href="#contact" class="nav-cta">Hire me</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+      <a href="#contact">Contact</a>
+    </div>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#ai">AI work</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Apps</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <main id="top">
 
-  <!-- HERO -->
-  <section id="top" class="hero">
-    <div class="hero-text">
-      <p class="eyebrow"><span class="dot"></span>Available now · Dubai, UAE</p>
-      <h1>
-        I build <span class="accent">AI agents</span><br />
-        and apps that<br />
-        real people use.
-      </h1>
-      <p class="hero-sub">
-        WhatsApp and voice AI agents, n8n automations and LLM features,
-        backed by 4+ years shipping native mobile apps to production for
-        clients in the UAE, Saudi Arabia and India.
-      </p>
-      <div class="hero-ctas">
-        <a href="#ai" class="btn-solid">See AI work</a>
-        <a href="NUAMAN_SADIQ_CV.pdf" class="btn-outline" download="NUAMAN_SADIQ_CV.pdf">Download CV</a>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="pill glass reveal"><span class="live-dot"></span>Available now · Dubai, UAE</p>
+        <h1 class="reveal">
+          I build<br />
+          <span class="rotator" id="rotator" aria-live="polite">AI agents</span><br />
+          <span class="h1-soft">that real people use.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          WhatsApp and voice AI agents, n8n automations and LLM features,
+          backed by 4+ years shipping native mobile apps to production for
+          clients in the UAE, Saudi Arabia and India.
+        </p>
+        <div class="hero-ctas reveal">
+          <a href="#ai" class="btn btn-primary magnetic">See AI work <span aria-hidden="true">→</span></a>
+          <a href="NUAMAN_SADIQ_CV.pdf" class="btn btn-glass glass magnetic" download="NUAMAN_SADIQ_CV.pdf">Download CV</a>
+        </div>
       </div>
-      <div class="stats">
-        <div><strong>4+</strong><span>Years shipping software</span></div>
-        <div><strong>5</strong><span>AI systems in production</span></div>
-        <div><strong>15+</strong><span>Apps shipped</span></div>
+
+      <div class="hero-visual reveal">
+        <div class="photo-glass glass tilt">
+          <div class="photo-inner">
+            <img src="profile.jpg" alt="Muhammed Nuaman Sadiq" onerror="this.style.display='none'" />
+          </div>
+          <div class="photo-caption">
+            <strong>Muhammed Nuaman Sadiq</strong>
+            <span>AI Automation &amp; Mobile Developer</span>
+          </div>
+        </div>
+        <div class="float-chip glass chip-1"><span class="mono">n8n</span> workflow running</div>
+        <div class="float-chip glass chip-2"><span class="live-dot"></span> WhatsApp agent online</div>
+        <div class="float-chip glass chip-3"><span class="mono">LLM</span> tool call ✓</div>
+      </div>
+
+      <div class="stats glass reveal">
+        <div><strong data-count="4">0</strong><em>+</em><span>Years shipping software</span></div>
+        <div><strong data-count="5">0</strong><span>AI systems in production</span></div>
+        <div><strong data-count="15">0</strong><em>+</em><span>Apps shipped</span></div>
+        <div><strong data-count="95">0</strong><em>%</em><span>On-time sprint delivery</span></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>n8n</span><span>WhatsApp Business API</span><span>Voice AI</span><span>LLM tool calling</span><span>Claude Code</span><span>Cursor</span><span>Node.js</span><span>Python</span><span>Supabase</span><span>PostgreSQL</span><span>Swift</span><span>SwiftUI</span><span>GoHighLevel</span><span>Webhooks</span>
+        <span>n8n</span><span>WhatsApp Business API</span><span>Voice AI</span><span>LLM tool calling</span><span>Claude Code</span><span>Cursor</span><span>Node.js</span><span>Python</span><span>Supabase</span><span>PostgreSQL</span><span>Swift</span><span>SwiftUI</span><span>GoHighLevel</span><span>Webhooks</span>
       </div>
     </div>
-
-    <div class="hero-photo">
-      <div class="photo-card">
-        <img src="profile.jpg" alt="Muhammed Nuaman Sadiq" onerror="this.style.display='none'" />
-      </div>
-      <p class="photo-name">Muhammed Nuaman Sadiq</p>
-      <p class="photo-role">AI Automation &amp; Mobile Developer</p>
-    </div>
-  </section>
-
-  <main>
 
     <!-- ABOUT -->
-    <section id="about" class="block">
-      <p class="block-label">About</p>
-      <div class="block-grid">
-        <p class="block-lead">
-          I turn business processes into AI systems that run on their own:
-          qualifying leads, booking appointments, writing notes, keeping data in sync.
-        </p>
-        <div class="block-body">
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 · About</p>
+        <h2>Business processes in.<br /><span class="grad">AI systems that run on their own</span> out.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass card reveal">
+          <div class="card-icon">⚡</div>
+          <h3>AI automation</h3>
           <p>
-            Since 2023 I've built AI automations for live clients: WhatsApp
-            agents that qualify and route leads, voice agents that book
-            appointments straight into calendars, and CRM pipelines with
-            retries and error handling so nothing gets lost. I build with n8n,
-            Node.js, Python, Supabase/PostgreSQL and LLM APIs, and I use
-            Claude Code and Cursor every day, reviewing what they write before
-            it ships.
+            I build AI automations for live clients: WhatsApp agents that
+            qualify and route leads, voice agents that book appointments into
+            calendars, and CRM pipelines with retries so nothing gets lost.
+            I work with n8n, Node.js, Python, Supabase/PostgreSQL and LLM APIs.
           </p>
+        </div>
+        <div class="glass card reveal">
+          <div class="card-icon">📱</div>
+          <h3>Mobile engineering</h3>
           <p>
-            Before that, and still, I'm a mobile engineer. I've spent four
-            years building Swift/SwiftUI apps with clean MVVM architecture,
-            REST and real-time APIs, and App Store releases, and I lead
-            delivery on a live booking platform for the Saudi market. That
-            background is why my automations are built to keep working
-            after launch.
+            Four years building Swift/SwiftUI apps with clean MVVM architecture,
+            REST and real-time APIs and App Store releases, including a live
+            booking platform for the Saudi market. That's why my automations
+            are built to keep working after launch.
+          </p>
+        </div>
+        <div class="glass card reveal">
+          <div class="card-icon">🤖</div>
+          <h3>AI-assisted, human-reviewed</h3>
+          <p>
+            I use Claude Code and Cursor every day to go from brief to working
+            v1 fast, and I review every line before it ships. Speed from the
+            tools, judgment from me.
           </p>
         </div>
       </div>
     </section>
 
     <!-- AI WORK -->
-    <section id="ai" class="block">
-      <p class="block-label">AI &amp; automation work</p>
-      <h2 class="block-title">Systems in production</h2>
+    <section id="ai" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">02 · AI &amp; automation</p>
+        <h2>Systems in <span class="grad">production</span></h2>
+      </div>
 
       <div class="ai-grid">
 
-        <article class="ai-card ai-card--wide">
+        <article class="glass card ai-card ai-feature tilt reveal">
           <div class="ai-top">
-            <p class="project-tags">Conversational AI · QA · Webhooks</p>
-            <span class="badge badge-live">Live demo</span>
+            <p class="tags">Conversational AI · QA · Webhooks</p>
+            <span class="badge badge-live"><span class="live-dot"></span>Live demo</span>
           </div>
-          <h3>ConvoFlow QA: test dashboard for conversational AI agents</h3>
+          <h3>ConvoFlow QA</h3>
+          <p class="ai-sub">Test dashboard for conversational AI agents</p>
           <p>
-            A QA and ticketing dashboard for testing voice and chat AI agents.
-            It records where an agent drifts from its script, opens a ticket for
-            each deviation, and tracks the fix through retest until it passes.
-            Results arrive over webhooks, so it plugs into existing agent pipelines.
+            Records where a voice or chat AI agent drifts from its script, opens
+            a ticket for each deviation, and tracks the fix through retest until
+            it passes. Results arrive over webhooks, so it plugs into existing
+            agent pipelines.
           </p>
-          <div class="flow" aria-label="How it works">
+          <div class="flow">
             <span>AI agent call</span><i></i><span>Webhook</span><i></i><span>Deviation check</span><i></i><span>Ticket</span><i></i><span>Retest</span>
           </div>
           <div class="ai-links">
-            <a href="https://dashboard-automatic-for-qa-and-tick.vercel.app" target="_blank" rel="noopener">Open live demo ↗</a>
-            <a href="https://github.com/nuaman11/Dashboard-Automatic-for-QA-and-Ticketing" target="_blank" rel="noopener">Source on GitHub ↗</a>
+            <a class="btn btn-primary btn-sm magnetic" href="https://dashboard-automatic-for-qa-and-tick.vercel.app" target="_blank" rel="noopener">Open live demo ↗</a>
+            <a class="btn btn-glass glass btn-sm magnetic" href="https://github.com/nuaman11/Dashboard-Automatic-for-QA-and-Ticketing" target="_blank" rel="noopener">Source ↗</a>
           </div>
         </article>
 
-        <article class="ai-card">
+        <article class="glass card ai-card tilt reveal">
           <div class="ai-top">
-            <p class="project-tags">WhatsApp · n8n · CRM</p>
+            <p class="tags">WhatsApp · n8n · CRM</p>
             <span class="badge">Client · Real estate</span>
           </div>
           <h3>WhatsApp lead qualification agent</h3>
           <p>
-            Replies to inbound WhatsApp leads automatically, asks qualifying
-            questions with branching logic, scores each lead, and routes it to
-            the right agent in the CRM. No one has to read every message by hand.
+            Replies to inbound WhatsApp leads, asks qualifying questions with
+            branching logic, scores each lead and routes it to the right agent
+            in the CRM. No one reads every message by hand.
           </p>
           <div class="flow">
             <span>WhatsApp</span><i></i><span>n8n + AI</span><i></i><span>Qualify</span><i></i><span>CRM</span>
           </div>
         </article>
 
-        <article class="ai-card">
+        <article class="glass card ai-card tilt reveal">
           <div class="ai-top">
-            <p class="project-tags">Voice AI · Calendar · CRM</p>
+            <p class="tags">Voice AI · Calendar · CRM</p>
             <span class="badge">Client</span>
           </div>
           <h3>Voice agent booking system</h3>
           <p>
             A phone AI agent that talks to callers, checks availability and
-            books appointments directly into Google Calendar, then logs the
-            booking in the CRM, all orchestrated through n8n.
+            books straight into Google Calendar, then logs the booking in the
+            CRM, all orchestrated through n8n.
           </p>
           <div class="flow">
             <span>Phone call</span><i></i><span>Voice AI</span><i></i><span>Calendar</span><i></i><span>CRM</span>
           </div>
         </article>
 
-        <article class="ai-card">
+        <article class="glass card ai-card tilt reveal">
           <div class="ai-top">
-            <p class="project-tags">Generative AI · Healthcare</p>
+            <p class="tags">Generative AI · Healthcare</p>
             <span class="badge">Production</span>
           </div>
           <h3>DoctorAssist: AI medical notes</h3>
           <p>
-            Generative AI that writes structured medical notes, built into a
-            live clinic management platform (iOS, Android, Web) with appointment
-            scheduling, patient records and WhatsApp reminders.
+            Generative AI that writes structured medical notes inside a live
+            clinic platform (iOS, Android, Web) with scheduling, patient records
+            and WhatsApp reminders.
           </p>
           <div class="flow">
             <span>Consultation</span><i></i><span>LLM</span><i></i><span>Structured note</span>
           </div>
         </article>
 
-        <article class="ai-card">
+        <article class="glass card ai-card tilt reveal">
           <div class="ai-top">
-            <p class="project-tags">Data pipelines · Reliability</p>
+            <p class="tags">Data pipelines · Reliability</p>
             <span class="badge">Client</span>
           </div>
           <h3>Multi-platform CRM sync</h3>
           <p>
-            Keeps GoHighLevel and Supabase/PostgreSQL in sync in both directions,
-            with retries, error branches and alerts, so records stay consistent
-            even when an API fails.
+            Keeps GoHighLevel and Supabase/PostgreSQL in sync both ways, with
+            retries, error branches and alerts, so records stay consistent even
+            when an API fails.
           </p>
           <div class="flow">
             <span>GoHighLevel</span><i></i><span>n8n</span><i></i><span>Supabase</span>
@@ -203,180 +245,212 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="block">
-      <p class="block-label">Experience</p>
-
-      <div class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>Freelance AI Automation Developer</h3>
-            <p class="entry-org">Self-employed · Remote</p>
-          </div>
-          <span class="entry-date">2023 — Present</span>
-        </div>
-        <ul>
-          <li>Built a WhatsApp Business API lead qualification agent in n8n for a real estate client, with branching logic, webhooks and CRM routing.</li>
-          <li>Delivered a voice AI booking agent that connects calls to Google Calendar and the CRM for end-to-end scheduling.</li>
-          <li>Engineered CRM sync pipelines (GoHighLevel, Supabase/PostgreSQL) with error handling and retry logic for production reliability.</li>
-          <li>Integrated Meta Ads API and Google Calendar API into lead-capture and scheduling workflows.</li>
-          <li>Use Claude Code and Cursor daily to ship dashboards, scripts and client tools, going from brief to working v1 within a day.</li>
-        </ul>
+    <section id="experience" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 · Experience</p>
+        <h2>Where I've <span class="grad">shipped</span></h2>
       </div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>Lead Mobile Developer · Generative AI Features</h3>
-            <p class="entry-org">Homey Infosystem Pvt Ltd · Saudi market</p>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot tl-dot-live"></div>
+          <div class="glass card">
+            <div class="tl-head">
+              <div>
+                <h3>Freelance AI Automation Developer</h3>
+                <p class="org">Self-employed · Remote</p>
+              </div>
+              <span class="date">2026 — Present</span>
+            </div>
+            <ul>
+              <li>Built a WhatsApp Business API lead qualification agent in n8n for a real estate client, with branching logic, webhooks and CRM routing.</li>
+              <li>Delivered a voice AI booking agent that connects calls to Google Calendar and the CRM for end-to-end scheduling.</li>
+              <li>Engineered CRM sync pipelines (GoHighLevel, Supabase/PostgreSQL) with error handling and retry logic.</li>
+              <li>Integrated Meta Ads API and Google Calendar API into lead-capture and scheduling workflows.</li>
+              <li>Ship dashboards, scripts and client tools daily with Claude Code and Cursor, from brief to working v1 within a day.</li>
+            </ul>
           </div>
-          <span class="entry-date">Jun 2025 — Present</span>
         </div>
-        <ul>
-          <li>Built generative AI medical note generation into DoctorAssist, a live multi-platform clinic system.</li>
-          <li>Lead delivery of a Booking.com-style accommodation platform: real-time availability, payments, GPS search.</li>
-          <li>Kept 95%+ of sprints on time across 3+ concurrent projects, coordinating iOS, Android, backend, UI/UX and QA.</li>
-          <li>Set architecture standards (Swift, SwiftUI, MVVM Clean Architecture) and run code reviews, cutting production defects by about 25%.</li>
-        </ul>
-      </div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>iOS Developer</h3>
-            <p class="entry-org">Axel Technologies Pvt Ltd</p>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="glass card">
+            <div class="tl-head">
+              <div>
+                <h3>Lead Mobile Developer · Generative AI Features</h3>
+                <p class="org">Homey Infosystem Pvt Ltd · Saudi market</p>
+              </div>
+              <span class="date">Jun 2025 — Sep 2026</span>
+            </div>
+            <ul>
+              <li>Built generative AI medical note generation into DoctorAssist, a live multi-platform clinic system.</li>
+              <li>Led delivery of a Booking.com-style accommodation platform: real-time availability, payments, GPS search.</li>
+              <li>Kept 95%+ of sprints on time across 3+ concurrent projects, coordinating iOS, Android, backend, UI/UX and QA.</li>
+              <li>Set architecture standards (Swift, SwiftUI, MVVM Clean Architecture) and ran code reviews, cutting production defects by about 25%.</li>
+            </ul>
           </div>
-          <span class="entry-date">Dec 2022 — May 2025</span>
         </div>
-        <ul>
-          <li>Cut page-load times by 30% by re-engineering API handling with Swift async/await.</li>
-          <li>Integrated third-party APIs, push notifications and real-time updates across multiple client apps.</li>
-          <li>Built offline-first data layers with Core Data and Firebase Realtime Database.</li>
-        </ul>
-      </div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>Associate Software Engineer, Intern</h3>
-            <p class="entry-org">Codilar Technologies</p>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="glass card">
+            <div class="tl-head">
+              <div>
+                <h3>iOS Developer</h3>
+                <p class="org">Axel Technologies Pvt Ltd</p>
+              </div>
+              <span class="date">Dec 2022 — May 2025</span>
+            </div>
+            <ul>
+              <li>Cut page-load times by 30% by re-engineering API handling with Swift async/await.</li>
+              <li>Integrated third-party APIs, push notifications and real-time updates across multiple client apps.</li>
+              <li>Built offline-first data layers with Core Data and Firebase Realtime Database.</li>
+            </ul>
           </div>
-          <span class="entry-date">Aug 2022 — Dec 2022</span>
         </div>
-        <ul>
-          <li>Developed e-commerce web applications on PHP / Magento with MySQL, HTML, CSS and JavaScript.</li>
-        </ul>
-      </div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>Freelance iOS Developer</h3>
-            <p class="entry-org">Self-employed</p>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="glass card">
+            <div class="tl-head">
+              <div>
+                <h3>Associate Software Engineer, Intern</h3>
+                <p class="org">Codilar Technologies</p>
+              </div>
+              <span class="date">Aug 2022 — Dec 2022</span>
+            </div>
+            <ul>
+              <li>Developed e-commerce web applications on PHP / Magento with MySQL, HTML, CSS and JavaScript.</li>
+            </ul>
           </div>
-          <span class="entry-date">Jun 2019 — May 2021</span>
         </div>
-        <ul>
-          <li>Built and published client apps to the App Store, owning the full cycle from design to release.</li>
-        </ul>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="glass card">
+            <div class="tl-head">
+              <div>
+                <h3>Freelance iOS Developer</h3>
+                <p class="org">Self-employed</p>
+              </div>
+              <span class="date">Jun 2019 — May 2021</span>
+            </div>
+            <ul>
+              <li>Built and published client apps to the App Store, owning the full cycle from design to release.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- APPS -->
-    <section id="projects" class="block">
-      <p class="block-label">Apps &amp; products</p>
-      <h2 class="block-title">Mobile apps I've shipped</h2>
-      <div class="projects">
-        <div class="project">
-          <p class="project-tags">Booking · Payments · Saudi market</p>
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 · Apps &amp; products</p>
+        <h2>Mobile apps I've <span class="grad">shipped</span></h2>
+      </div>
+      <div class="apps-grid">
+        <div class="glass card app tilt reveal">
+          <div class="app-icon" style="--c1:#ff7a45;--c2:#ff3d77">H</div>
+          <p class="tags">Booking · Payments · Saudi market</p>
           <h3>Homey</h3>
-          <p>Accommodation booking platform for Saudi Arabia: search, real-time availability, wishlists, secure payments and location filtering.</p>
+          <p>Accommodation booking for Saudi Arabia: search, real-time availability, wishlists, secure payments and location filtering.</p>
         </div>
-        <div class="project">
-          <p class="project-tags">CRM · Lead management · Maps</p>
+        <div class="glass card app tilt reveal">
+          <div class="app-icon" style="--c1:#4facfe;--c2:#7b5cff">W</div>
+          <p class="tags">CRM · Lead management · Maps</p>
           <h3>Workpex</h3>
-          <p>CRM and lead management with sales pipelines, follow-up reminders, call tracking and recording, GPS and analytics.</p>
+          <p>CRM and lead management with sales pipelines, follow-up reminders, call tracking, GPS and analytics.</p>
         </div>
-        <div class="project">
-          <p class="project-tags">Travel · SwiftUI</p>
+        <div class="glass card app tilt reveal">
+          <div class="app-icon" style="--c1:#21d4a7;--c2:#1f8fff">D</div>
+          <p class="tags">Travel · SwiftUI</p>
           <h3>DozPass</h3>
           <p>Travel companion with priority access to airport lounges, hotels, restaurants and EV stations during stopovers.</p>
         </div>
-        <div class="project">
-          <p class="project-tags">Open source · Swift</p>
+        <div class="glass card app tilt reveal">
+          <div class="app-icon" style="--c1:#c86dd7;--c2:#3023ae">B</div>
+          <p class="tags">Open source · Swift</p>
           <h3>Hotel Booking (iOS)</h3>
           <p>A Booking.com-inspired iOS app in Swift: search, maps, filters and payments.</p>
-          <a class="project-link" href="https://github.com/nuaman11/Hotel-Booking" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <a class="link" href="https://github.com/nuaman11/Hotel-Booking" target="_blank" rel="noopener">View on GitHub ↗</a>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="block">
-      <p class="block-label">Skills</p>
+    <section id="skills" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">05 · Skills</p>
+        <h2>The <span class="grad">toolkit</span></h2>
+      </div>
       <div class="skills-grid">
-        <div class="skill-group skill-group--ai">
+        <div class="glass card skill reveal skill-ai">
           <h4>AI &amp; agents</h4>
-          <div class="tags"><span>LLM APIs</span><span>Tool / function calling</span><span>Prompt design</span><span>Voice AI agents</span><span>WhatsApp Business API</span></div>
+          <div class="chips"><span>LLM APIs</span><span>Tool / function calling</span><span>Prompt design</span><span>Voice AI agents</span><span>WhatsApp Business API</span></div>
         </div>
-        <div class="skill-group skill-group--ai">
+        <div class="glass card skill reveal skill-ai">
           <h4>Automation</h4>
-          <div class="tags"><span>n8n</span><span>Webhooks</span><span>Error handling &amp; retries</span><span>GoHighLevel</span><span>Meta Ads API</span><span>Google Calendar API</span></div>
+          <div class="chips"><span>n8n</span><span>Webhooks</span><span>Error handling &amp; retries</span><span>GoHighLevel</span><span>Meta Ads API</span><span>Google Calendar API</span></div>
         </div>
-        <div class="skill-group skill-group--ai">
+        <div class="glass card skill reveal skill-ai">
           <h4>AI coding tools</h4>
-          <div class="tags"><span>Claude Code</span><span>Cursor</span><span>ChatGPT</span></div>
+          <div class="chips"><span>Claude Code</span><span>Cursor</span><span>ChatGPT</span></div>
         </div>
-        <div class="skill-group">
+        <div class="glass card skill reveal">
           <h4>Backend &amp; data</h4>
-          <div class="tags"><span>Node.js</span><span>Python</span><span>Supabase</span><span>PostgreSQL</span><span>Firebase</span><span>REST</span><span>GraphQL</span><span>WebSockets</span></div>
+          <div class="chips"><span>Node.js</span><span>Python</span><span>Supabase</span><span>PostgreSQL</span><span>Firebase</span><span>REST</span><span>GraphQL</span><span>WebSockets</span></div>
         </div>
-        <div class="skill-group">
+        <div class="glass card skill reveal">
           <h4>Mobile</h4>
-          <div class="tags"><span>Swift</span><span>SwiftUI</span><span>UIKit</span><span>Combine</span><span>Core Data</span><span>MapKit</span><span>Kotlin</span></div>
+          <div class="chips"><span>Swift</span><span>SwiftUI</span><span>UIKit</span><span>Combine</span><span>Core Data</span><span>MapKit</span><span>Kotlin</span></div>
         </div>
-        <div class="skill-group">
+        <div class="glass card skill reveal">
           <h4>Practices</h4>
-          <div class="tags"><span>MVVM</span><span>Clean Architecture</span><span>Git</span><span>Agile / Scrum</span><span>Code review</span><span>XCTest</span></div>
+          <div class="chips"><span>MVVM</span><span>Clean Architecture</span><span>Git</span><span>Agile / Scrum</span><span>Code review</span><span>XCTest</span></div>
         </div>
       </div>
-    </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="block">
-      <p class="block-label">Education &amp; certifications</p>
-      <div class="entry">
-        <div class="entry-head">
-          <div>
-            <h3>B.Tech, Computer Science Engineering</h3>
-            <p class="entry-org">PRIST University, Thanjavur, India</p>
-          </div>
-          <span class="entry-date">2018 — 2022</span>
+      <div class="edu-row">
+        <div class="glass card edu reveal">
+          <p class="eyebrow">Education</p>
+          <h3>B.Tech, Computer Science Engineering</h3>
+          <p class="org">PRIST University, Thanjavur, India · 2018 — 2022</p>
         </div>
-      </div>
-      <div class="certs">
-        <div><strong>AI Fundamentals</strong><span>Google · May 2026</span></div>
-        <div><strong>Generative AI</strong><span>LinkedIn Learning · Dec 2025</span></div>
-        <div><strong>Foundations of Project Management</strong><span>Google · Nov 2025</span></div>
-        <div><strong>iOS App Development</strong><span>iPlanet · Aug 2022</span></div>
+        <div class="glass card edu reveal">
+          <p class="eyebrow">Certifications</p>
+          <ul class="certs">
+            <li><strong>AI Fundamentals</strong><span>Google · May 2026</span></li>
+            <li><strong>Generative AI</strong><span>LinkedIn Learning · Dec 2025</span></li>
+            <li><strong>Foundations of Project Management</strong><span>Google · Nov 2025</span></li>
+            <li><strong>iOS App Development</strong><span>iPlanet · Aug 2022</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="block contact-block">
-      <p class="block-label">Contact</p>
-      <h2 class="contact-heading">Need an AI agent or automation built and kept running? Let's talk.</h2>
-      <div class="contact-grid">
-        <a href="mailto:nuamansadiq59@gmail.com"><span>Email</span>nuamansadiq59@gmail.com</a>
-        <a href="tel:+971581773440"><span>Phone</span>+971 58 177 3440</a>
-        <a href="https://wa.me/971581773440" target="_blank" rel="noopener"><span>WhatsApp</span>Message directly</a>
-        <a href="https://www.linkedin.com/in/nuaman-sadiq-ab853b191/" target="_blank" rel="noopener"><span>LinkedIn</span>Muhammed Nuaman Sadiq</a>
-        <a href="https://github.com/nuaman11" target="_blank" rel="noopener"><span>GitHub</span>@nuaman11</a>
+    <section id="contact" class="section">
+      <div class="glass contact-card reveal">
+        <p class="eyebrow">06 · Contact</p>
+        <h2>Need an AI agent built<br /><span class="grad">and kept running?</span></h2>
+        <p class="contact-sub">I can start immediately. Remote or on-site in Dubai.</p>
+        <div class="contact-ctas">
+          <a href="mailto:nuamansadiq59@gmail.com" class="btn btn-primary magnetic">Email me</a>
+          <a href="https://wa.me/971581773440" target="_blank" rel="noopener" class="btn btn-glass glass magnetic">WhatsApp</a>
+        </div>
+        <div class="contact-grid">
+          <a href="mailto:nuamansadiq59@gmail.com"><span>Email</span>nuamansadiq59@gmail.com</a>
+          <a href="tel:+971581773440"><span>Phone</span>+971 58 177 3440</a>
+          <a href="https://www.linkedin.com/in/nuaman-sadiq-ab853b191/" target="_blank" rel="noopener"><span>LinkedIn</span>Muhammed Nuaman Sadiq ↗</a>
+          <a href="https://github.com/nuaman11" target="_blank" rel="noopener"><span>GitHub</span>@nuaman11 ↗</a>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
       <p>© 2026 Muhammed Nuaman Sadiq</p>
-      <a href="#top">Back to top</a>
+      <a href="#top">Back to top ↑</a>
     </footer>
 
   </main>
