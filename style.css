@@ -410,7 +410,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 }
 
 /* ── APPS ── */
-.apps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.app-wide { grid-column: span 2; }
 .app-icon {
   width: 56px; height: 56px; border-radius: 16px;
   display: grid; place-items: center;
@@ -501,6 +502,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .section { padding: 80px 0 20px; }
   .card { padding: 24px; }
   .ai-grid, .apps-grid, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+  .app-wide { grid-column: auto; }
   .ai-feature { padding: 28px 24px; }
   .certs { grid-template-columns: 1fr; }
   .float-chip { font-size: .72rem; padding: 7px 11px; }
